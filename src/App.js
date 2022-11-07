@@ -10,10 +10,10 @@ import DoctorDelete from './features/doctor/DoctorDelete';
 
 function App() {
   return ( 
-    <div class='d-flex w-100'>
+    <div className='d-flex w-100'>
       <Router>
         <Navigations />
-        <div class='d-flex flex-grow-1 justify-content-center'>
+        <div className='d-flex flex-grow-1 justify-content-center'>
           <Routes>
             <Route path = '/' element ={<Doctors />} />
             <Route path = '/reserve_form' element ={<ReserveForm />} />
