@@ -24,5 +24,13 @@ export const getDoctors = () => (dispatch) => {
     });
   });
 };
+export const addDoctors = (addDoctor) => (dispatch) => {
+  axios.post('api/v1/doctors', addDoctor).then((res) => {
+    dispatch({
+      type: ADD_DOCTORS,
+      payload: res.data,
+    });
+  });
+};
 
 export default doctorReducer;
