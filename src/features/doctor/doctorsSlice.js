@@ -1,10 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchDoctors = createAsyncThunk('doctors/fetchingDoctors', async () => {
-  const response = await fetch('http://localhost:3000/doctors');
-  console.log(response);
+  const response = await fetch('http://localhost:3000/api/v1/doctors');
   const doctors = await response.json();
-  console.log(doctors);
+  Object.entries(doctors).forEach(entry =>{
+    const [key, value] = entry
+    console.log(key, value);
+  })
+  console.log(doctors)
   return doctors;
 });
 

@@ -10,17 +10,18 @@ function Doctors() {
     dispatch(fetchDoctors());
   };
 
-  console.log(fetchDoctors());
   useEffect(() => {
     retrieveDoctors();
   }, []);
 
-  const doctors = useSelector((state) => state.doctors);
+  const doctors  = useSelector((state) => state.doctors);
   return (
-    // doctors.array.forEach(element => {
-    //   <div>Element.title</div>
-    // })
+    
+      // doctors.foreach(e => {
+      //     <div>e</div>
+      // }),
     console.log(doctors)
+      
   )
 }
 
