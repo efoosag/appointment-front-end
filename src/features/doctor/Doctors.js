@@ -1,30 +1,33 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchDoctors } from './doctorsSlice';
+import Doctor from './Doctor'
 
 function Doctors() {
-  const [initial, setInitial] = useState(0);
-  const [right, setRight] = useState(true);
   const dispatch = useDispatch();
 
   const retrieveDoctors = () => {
     dispatch(fetchDoctors());
   };
-  const doctors  = useSelector((state) => state.doctors.doctors);
+  const doctors  = useSelector((state) => state?.doctors?.doctors);
   
   useEffect(() => {
-    retrieveDoctors();
-  }, []);
+    retrieveDoctors()
+  }, [fetchDoctors]);  
 
-  const doctorsTest = (arr) => arr.slice(initial, initial + 3);
-  const nextDoctors = doctorsTest(doctors || []);
-
+  console.log(doctors)
   return (
-    console.log(nextDoctors),
-      nextDoctors.map(e => (
-          // <div className='bg-primary' key={e.id}>{ e.name }</div>
-          console.log({ e })
+      doctors?.map(doctor => (
+          <div className='bg-body' key={ doctor.id }>
+            <Doctor 
+            id= {doctor.id} 
+            name={doctor.name}
+            bio = {doctor.biography}
+            title= {doctor.title}
+            photo= {doctor.photo}
+            />
+          </div> 
       ))   
  
   )
