@@ -16,10 +16,10 @@ function App() {
         <div className='d-flex flex-grow-1 justify-content-center'>
           <Routes>
             <Route path = '/' element ={<Doctors />} />
-            <Route path = '/reserve_form' element ={<ReserveForm />} />
-            <Route path = '/reservation' element ={<Reservations />} />
-            <Route path = '/add_doctor' element ={<DoctorForm />} />
-            <Route path = '/delete_doctor' element ={<DoctorDelete />} />
+            <Route path = '/reserve_form' exact element ={<ReserveForm />} />
+            <Route path = '/reservation' exact element ={<Reservations />} />
+            <Route path = '/add_doctor' exact element ={<DoctorForm />} />
+            <Route path = '/delete_doctor' exact element ={<DoctorDelete />} />
           </Routes> 
         </div>               
       </Router>
