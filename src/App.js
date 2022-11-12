@@ -6,6 +6,7 @@ import Reservations from './features/reservation/Reservations';
 import ReserveForm from './features/reservation/ReserveForm';
 import DoctorForm from './features/doctor/DoctorForm';
 import DoctorDelete from './features/doctor/DoctorDelete';
+import Signup from './features/user/Signup';
 // import 'App.css'
 
 function App() {
@@ -15,7 +16,10 @@ function App() {
         <Navigations />
         <div class='d-flex flex-grow-1 justify-content-center'>
           <Routes>
-            <Route path = '/' element ={<Doctors />} />
+          
+            <Route path = '/signup' element ={<Signup />} />
+           
+            <Route path = '/doctor' element ={<Doctors />} />
             <Route path = '/reserve_form' element ={<ReserveForm />} />
             <Route path = '/reservation' element ={<Reservations />} />
             <Route path = '/add_doctor' element ={<DoctorForm />} />

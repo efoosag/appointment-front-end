@@ -7,7 +7,10 @@ function Navigations() {
           <a class="navbar-brand" href="/">Navbar</a>
         </div>
         <div class="container-fluid p-2">
-          <h4><a class="navbar-brand" href="/">Doctor</a></h4>
+          <h4><a class="navbar-brand" href="/">Sign Up</a></h4>
+        </div>        
+        <div class="container-fluid p-2">
+          <h4><a class="navbar-brand" href="/doctor">Doctor</a></h4>
         </div>
         <div class="container-fluid p-2">
           <h4><a class="navbar-brand" href="/reserve_form">Make Reservation</a></h4>
@@ -20,6 +23,12 @@ function Navigations() {
         </div>
         <div class="container-fluid p-2">
           <h4><a class="navbar-brand" href="/delete_doctor">Delete Doctor</a></h4>
+        </div>
+        <div class="container-fluid p-2">
+          <h4><a class="navbar-brand" href="/signup">Sign Up</a></h4>
+        </div>
+        <div class="container-fluid p-2">
+          <h4><a class="navbar-brand" href="/login">Login</a></h4>
         </div>
    </nav>
   )
