@@ -14,10 +14,10 @@ function AddDoctor() {
 
 
     const addDoctor = {
-      token: user.token,
+      id: user.id,
       name: e.target[0].value,
-      specialization: e.target[1].value,
-      picture: e.target[2].value,
+      bio: e.target[1].value,
+      photo: e.target[2].value,
     };
 
     dispatch(addDoctors(addDoctor, { type: 'ADD_DOCTORS' }));
@@ -28,7 +28,7 @@ function AddDoctor() {
       <form className="sinup-form" onSubmit={addsDoctor}>
         <h2>Add New Doctor</h2>
         <input type="text" className="form-input" name="name" required placeholder="name" />
-        <input type="text" className="form-input" name="specialty" required placeholder="Specialty" />
+        <input type="text" className="form-input" name="bio" required placeholder="bio" />
         <input type="text" className="form-input" name="photo" required placeholder="Add Link to profile photo" />
         <button type="submit" className="sigup-submit-btn">Add Doctor</button>
       </form>
