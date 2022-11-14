@@ -4,7 +4,7 @@ import { getDoctors } from '../../app/doctor';
 import { useDispatch} from 'react-redux';
 import './doctor.css';
 
-function Doctor({name, title, bio, photo, id}) {
+function Doctor({name, title, photo}) {
 
   const dispatch = useDispatch();
   const handleDetails = () => {
@@ -18,7 +18,7 @@ function Doctor({name, title, bio, photo, id}) {
         <img className="doctor-image" src={photo} alt={name}onClick={handleDetails}  />
       </Link>
       <h3 className="doctor-name">{name}</h3>
-      <p className="doctor-description">{title}</p>
+      <p className="doctor-title">{title}</p>
     </div>
   </>
     
