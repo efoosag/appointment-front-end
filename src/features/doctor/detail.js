@@ -8,10 +8,6 @@ import { fetchDoctors } from './doctorsSlice';
 export default function Detail () {
     const dispatch = useDispatch();
 
-    const handleReserve = (doctors) => {
-      dispatch(fetchDoctors(doctors));
-      navigate('/reservation');
-    };
 
     const navigate = useNavigate();
     const doctors  = useSelector((state) => state?.doctors?.doctors);
@@ -30,7 +26,7 @@ export default function Detail () {
           </table>
         </div>
       </div>
-      <button buttonType="reserve" onClick={() => handleReserve(doctors)}>Reserve</button>
+      <button buttonType="reserve" >Reserve</button>
       <Link to='/' className='prev'>
         < AiFillCaretLeft  className='back-arrow'/>
       </Link>
