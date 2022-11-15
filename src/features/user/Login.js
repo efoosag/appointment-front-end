@@ -1,14 +1,16 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { signInUser, useSelect } from './UserSlice';
+import { signInUser } from './UserSlice';
 import { useNavigate } from 'react-router-dom';
 
 const Login= () => {  
   const navigation = useNavigate(); 
 
   const dispatch = useDispatch();
-  const { isSuccess } = useSelector( useSelect )
+  const state = useSelector((state) => state.user)
+  const { loggedIn } = state
+  const [signIn, setSignIn] = useState(loggedIn)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState(""); 
  
@@ -23,10 +25,11 @@ const Login= () => {
     setPassword("");
   };  
   useEffect(() => {
-    if (isSuccess) {
+    setSignIn(loggedIn);
+    if (signIn === 'in') {
       navigation("/doctors");
     }
-  }, [isSuccess,  navigation]);
+  }, [loggedIn, signIn, navigation]);
 
   
   return (
