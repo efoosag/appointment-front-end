@@ -1,19 +1,30 @@
 const GET_DOCTOR = "GET_DOCTOR"
 const url = "http://localhost:3000/api/v1/doctors"
 
+const initialState = JSON.parse(localStorage.getItem('doctor'));
+
+const detailReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case GET_DOCTOR:
+      return action.doctor;
+    default:
+      return state;
+  }
+}
+
+export default detailReducer;
+
 export const getDoctor = () => async(dispatch) => {
     const response = await fetch(url);
-    const houses = await response.json();
+    const doctor = await response.json();
   
     dispatch({
         type: GET_DOCTOR,
-        payload: houses
+        payload: doctor
     })
   }
 
-export default getDoctor;
-
-export const getDoctors = (doctor) => {
+export const getdoctor = (doctor) => {
   localStorage.setItem('doctor',  JSON.stringify(doctor));
   return {
     type: GET_DOCTOR,

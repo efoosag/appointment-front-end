@@ -36,11 +36,11 @@ export const addDoctors = (addDoctor) => (dispatch) => {
 
 export const getDoctor = () => async(dispatch) => {
   const response = await fetch(url);
-  const houses = await response.json();
+  const doctor = await response.json();
 
   dispatch({
       type: GET_DOCTORS,
-      payload: houses
+      payload: doctor
   })
 }
 
