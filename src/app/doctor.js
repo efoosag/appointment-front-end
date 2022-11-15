@@ -1,5 +1,6 @@
 import axios from "axios";
 
+const url = "http://localhost:3000/api/v1/doctors"
 const GET_DOCTORS = 'redux/GET_DOCTORS';
 const ADD_DOCTORS = 'doctora/redux/ADD_DOCTORS';
 
@@ -17,7 +18,7 @@ const doctorReducer = (state = [], action) => {
   }
 };
 export const getDoctors = () => (dispatch) => {
-  axios.get('api/v1/doctors').then((res) => {
+  axios.get('http://localhost:3000/api/v1/doctors').then((res) => {
     dispatch({
       type: GET_DOCTORS,
       payload: res.data,
@@ -25,7 +26,7 @@ export const getDoctors = () => (dispatch) => {
   });
 };
 export const addDoctors = (addDoctor) => (dispatch) => {
-  axios.post('api/v1/doctors', addDoctor).then((res) => {
+  axios.post('http://localhost:3000/api/v1/doctors', addDoctor).then((res) => {
     dispatch({
       type: ADD_DOCTORS,
       payload: res.data,
@@ -33,4 +34,26 @@ export const addDoctors = (addDoctor) => (dispatch) => {
   });
 };
 
+export const saveDoctor = (doctor) => async(dispatch) => {
+  await fetch(url,
+    {
+      method: 'POST',
+      body: JSON.stringify({
+        name: doctor.name,
+        title: doctor.title,
+        photo: doctor.photo,
+        bio: doctor.bio,
+        available: doctor.available,
+        user_id: doctor.user_id
+      }),
+      headers: {
+       "Content-Type": "application/json"
+      },
+    });
+
+  dispatch({
+    type: GET_DOCTORS,
+    payload: doctor,
+  })
+};
 export default doctorReducer;
