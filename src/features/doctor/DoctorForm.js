@@ -59,10 +59,10 @@ const AddDoctor = () => {
       <div className={navbar? 'add-doctor-box active' : 'add-doctor-box'}>
         <h3 className="">ADD NEW DOCTOR</h3>
         <form className="forms">
-          <input type="text" name="name" label="DOCTOR name" onChange={handleChange} value={name} required placeholder="name" formType='add_house' />
+          <input type="text" name="name" label="DOCTOR name" onChange={handleChange} value={name} required placeholder="name" formType='add_doctor' />
           <input type="text" name="title" label="title" onChange={handleChange} value={title} required placeholder="title" formType='description' />
-          <input type="url" name="photo" label="photo" onChange={handleChange} value={photo} required placeholder="Add Link to profile photo" formType='add_house' />
-          <button type="submit" buttonType="inverted" onClick={submitDoctor}>SUBMIT</button>
+          <input type="url" name="photo" label="photo" onChange={handleChange} value={photo} required placeholder="Add Link to profile photo" formType='add_doctor' />
+          <button type="submit" buttontype="inverted" onClick={submitDoctor}>SUBMIT</button>
         </form>
       </div>
     </>

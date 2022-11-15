@@ -9,13 +9,11 @@
 }
 
 .doctor-image {
-  width: 95%;
   border-radius: 5%;
   
 }
   
 .doctor-name {
-  align-items: center;
   border: 0;
   color: rgb(34, 33, 33);
   border-bottom: 1px dashed rgb(94, 68, 68);
