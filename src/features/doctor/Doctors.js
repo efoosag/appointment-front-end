@@ -16,7 +16,6 @@ function Doctors() {
     retrieveDoctors()
   }, [fetchDoctors]);  
 
-  console.log(doctors)
   return (
       doctors?.map(doctor => (
           <div className='bg-body' key={ doctor.id }>
