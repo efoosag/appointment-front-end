@@ -1,36 +1,30 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { signUpUser, useSelect } from './UserSlice';
+import { signInUser, useSelect } from './UserSlice';
 import { useNavigate } from 'react-router-dom';
 
-const Signup = () => {  
-  const navigation = useNavigate();
- 
-    
-  
+const Login= () => {  
+  const navigation = useNavigate(); 
 
   const dispatch = useDispatch();
   const { isSuccess } = useSelector( useSelect )
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState(""); 
  
-  const registerUser = (e) => {
+  const loginUser = (e) => {
     e.preventDefault();
-    const newUser = {
-      name,
+    const loginDetails = {
       email,
       password,
     };
-    dispatch(signUpUser(newUser));
-    setName("");
+    dispatch(signInUser(loginDetails));
     setEmail("");
     setPassword("");
   };  
   useEffect(() => {
     if (isSuccess) {
-      navigation("/");
+      navigation("/doctors");
     }
   }, [isSuccess,  navigation]);
 
@@ -49,10 +43,6 @@ const Signup = () => {
               className="space-y-6"
               method="POST"
             >
-             <div>
-              <label>Name</label>
-              <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
-            </div>
             <div>
               <label>Email</label>
               <input
@@ -71,13 +61,13 @@ const Signup = () => {
                 onChange={(e) => setPassword(e.target.value)}
               />              
             </div>
-            <button type='submit' onClick={registerUser}>Submit</button>
+            <button type='submit' onClick={loginUser}>Submit</button>
             </form>
             <div className="mt-6">
               <div className="relative">
                 <div className="relative flex justify-center text-sm">
                   <span className="px-2 bg-white text-gray-500">
-                    Or <Link to="/login"> Login</Link>
+                    Or <Link to="/signup"> Sign Up</Link>
                   </span>
                 </div>
               </div>
@@ -88,4 +78,4 @@ const Signup = () => {
     </Fragment>
   );
 };
-export default Signup;
+export default Login;
