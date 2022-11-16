@@ -1,8 +1,8 @@
 import React from 'react'
 import { Link, } from 'react-router-dom';
-import { getDoctors } from '../../app/doctor';
 import { useDispatch} from 'react-redux';
 import './doctor.css';
+import { getDoctors } from '../../app/detail';
 
 
 function Doctor({name, title, photo}) {
