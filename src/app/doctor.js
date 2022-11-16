@@ -34,6 +34,16 @@ export const addDoctors = (addDoctor) => (dispatch) => {
   });
 };
 
+export const getDoctor = () => async(dispatch) => {
+  const response = await fetch(url);
+  const doctor = await response.json();
+
+  dispatch({
+      type: GET_DOCTORS,
+      payload: doctor
+  })
+}
+
 export const saveDoctor = (doctor) => async(dispatch) => {
   await fetch(url,
     {
