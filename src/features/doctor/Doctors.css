@@ -1,8 +1,14 @@
 .doctor {
   width: 100%;
+  overflow-x: auto;
+}
+
+.dox-box {
+    display: flex;
 }
 
 .doctor-title {
+  margin-top: 10px;
   display: flex;
   justify-content: center;
 }
@@ -12,12 +18,10 @@
 }
 
 .dashes {
-  margin-top: 40px;
   color: grey;
 }
 
 .doctors-box {
-  margin-top: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -62,7 +66,7 @@
     margin-left: 0;
   }
 
-  .houses-box {
+  .doctors-box {
     width: 100%;
     flex-direction: column;
     justify-content:flex-start;

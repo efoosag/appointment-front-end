@@ -52,9 +52,8 @@ function Doctors() {
            </div>
            {
            doctors?.map(doctor => (<Doctor key={ doctor.id } doctor={doctor}/>))
-           }
-          
-            <div className="next" onClick={next}>
+           }   
+        <div className="next" onClick={next}>
         < AiFillCaretRight  className='next-arrow'/>
         </div>
         <hr className='hr-btn'/>

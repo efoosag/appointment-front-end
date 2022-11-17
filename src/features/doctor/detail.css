@@ -7,11 +7,12 @@
   .detail-image {
     border-radius: 5%;
     max-width: 1000px;
-    
+    width: 95%;
     margin: 0 auto;
   }
 
 .buttons {
+  margin-top: 15px;
   display: flex;
   justify-content: space-between;
 }
