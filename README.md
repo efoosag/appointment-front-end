@@ -20,7 +20,7 @@ Main features of this website are:
 ## Kanban Board:
 Kanban Board [link](https://github.com/users/efoosag/projects/9)
 **Initial state of the Kanban Board:**
-
+![final capstone kanban board](https://user-images.githubusercontent.com/96612103/202553426-d53bf33f-bc93-4a88-bf2f-124899c42bac.png)
 
 ## Live link
 [doctors-appoint.com](https://)
