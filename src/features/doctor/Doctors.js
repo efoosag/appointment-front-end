@@ -6,6 +6,7 @@ import Doctor from './Doctor'
 import { AiFillCaretRight, AiFillCaretLeft } from "react-icons/ai";
 import './Doctors.css'
 
+
 function Doctors() {
   const dispatch = useDispatch();
 
@@ -67,7 +68,6 @@ function Doctors() {
         </div>    
       </div>
     </div> 
-         
  
   )
 }

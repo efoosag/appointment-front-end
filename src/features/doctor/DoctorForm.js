@@ -11,7 +11,7 @@ const AddDoctor = () => {
   const navigate = useNavigate();
 
   const gotToHome = () => {
-    navigate('/');
+    navigate('/doctors');
   };
 
   const dispatch = useDispatch();
@@ -59,10 +59,10 @@ const AddDoctor = () => {
       <div className={navbar? 'add-doctor-box active' : 'add-doctor-box'}>
         <h3 className="">ADD NEW DOCTOR</h3>
         <form className="forms">
-          <input type="text" name="name" label="DOCTOR name" onChange={handleChange} value={name} required placeholder="name" formType='add_doctor' />
-          <input type="text" name="title" label="title" onChange={handleChange} value={title} required placeholder="title" formType='description' />
-          <input type="text" name="biography" label="biography" onChange={handleChange} value={biography} required placeholder="biography" formType='biography' />
-          <input type="url" name="photo" label="photo" onChange={handleChange} value={photo} required placeholder="Add Link to profile photo" formType='add_doctor' />
+          <input type="text" name="name" label="DOCTOR name" onChange={handleChange} value={name} required placeholder="name" formtype='add_doctor' />
+          <input type="text" name="title" label="title" onChange={handleChange} value={title} required placeholder="title" formtype='description' />
+          <input type="text" name="biography" label="biography" onChange={handleChange} value={biography} required placeholder="biography" formtype='description' />
+          <input type="url" name="photo" label="photo" onChange={handleChange} value={photo} required placeholder="Add Link to profile photo" formtype='add_doctor' />
           <button type="submit" buttontype="inverted" onClick={submitDoctor}>SUBMIT</button>
         </form>
       </div>
