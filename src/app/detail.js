@@ -14,7 +14,7 @@ const detailReducer = (state = initialState, action) => {
 export default detailReducer;
 
 export const getDoctors = (doctor) => {
-  localStorage.setItem('doctor',  JSON.stringify(doctor));
+  localStorage.setItem('doctors',  JSON.stringify(doctor));
   return {
     type: GET_DOCTOR,
     doctor: doctor,

@@ -1,9 +1,10 @@
 import React from 'react'
+import './navigation.css'
 
 function Navigations() {
   return (
     <nav className="navbar navbar-light bg-light w-25">
-        <div className="container-fluid p-5">
+        <div className="container-fluid nav p-5">
           <a className="navbar-brand" href="/">Navbar</a>
         </div>
         <div className="container-fluid p-2">
