@@ -8,6 +8,7 @@ import DoctorForm from './features/doctor/DoctorForm';
 import DoctorDelete from './features/doctor/DoctorDelete';
 import Signup from './features/user/Signup';
 import Login from './features/user/Login';
+import Detail from './features/doctor/detail';
 // import 'App.css'
 
 function App() {
@@ -19,6 +20,8 @@ function App() {
           <Routes>
             <Route path = '/' element ={<Login />} />
             <Route path = '/doctors' element ={<Doctors />} />
+            <Route path = '/' element ={<Doctors />} />
+            <Route path= '/doctor' element={<Detail />} />
             <Route path = '/reserve_form' exact element ={<ReserveForm />} />
             <Route path = '/reservation' exact element ={<Reservations />} />
             <Route path = '/add_doctor' exact element ={<DoctorForm />} />

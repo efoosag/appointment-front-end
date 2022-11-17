@@ -4,6 +4,7 @@ import { getDoctors } from '../../app/doctor';
 import { useDispatch} from 'react-redux';
 import './doctor.css';
 
+
 function Doctor({name, title, photo}) {
 
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ function Doctor({name, title, photo}) {
   return (
     <>
     <div className='doctor-box'>
-      <Link to='/Doctor'>
+      <Link to='/doctor'>
         <img className="doctor-image" src={photo} alt={name}onClick={handleDetails}  />
       </Link>
       <h3 className="doctor-name">{name}</h3>
