@@ -2,7 +2,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchDoctors } from './doctorsSlice';
-import Doctor from './Doctor'
+import Doctor from './Doctor';
 
 function Doctors() {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ function Doctors() {
             bio = {doctor.biography}
             title= {doctor.title}
             photo= {doctor.photo}
-            />
+            />            
           </div> 
       ))   
  

@@ -52,7 +52,7 @@ export const saveDoctor = (doctor) => async(dispatch) => {
         name: doctor.name,
         title: doctor.title,
         photo: doctor.photo,
-        bio: doctor.bio,
+        biography: doctor.biography,
         available: doctor.available,
         user_id: doctor.user_id
       }),
