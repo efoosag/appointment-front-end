@@ -1,38 +1,22 @@
-import axios from "axios";
-
 const url = "http://localhost:3000/api/v1/doctors"
 const GET_DOCTORS = 'redux/GET_DOCTORS';
-const ADD_DOCTORS = 'doctora/redux/ADD_DOCTORS';
+const POST_DOCTORS = "POST_HOUSE"
 
-// eslint-disable-next-line default-param-last
-const doctorReducer = (state = [], action) => {
-  switch (action.type) {
+const initialState = []
+
+const doctorReducer = (state = initialState, {type, payload}) => {
+  switch (type) {
     case GET_DOCTORS:
-      return action.payload;
-
-    case ADD_DOCTORS:
-      return action.payload;
-
+      return payload
+    case POST_DOCTORS:
+      return [...state, payload]
     default:
       return state;
   }
 };
-export const getDoctors = () => (dispatch) => {
-  axios.get('http://localhost:3000/api/v1/doctors').then((res) => {
-    dispatch({
-      type: GET_DOCTORS,
-      payload: res.data,
-    });
-  });
-};
-export const addDoctors = (addDoctor) => (dispatch) => {
-  axios.post('http://localhost:3000/api/v1/doctors', addDoctor).then((res) => {
-    dispatch({
-      type: ADD_DOCTORS,
-      payload: res.data,
-    });
-  });
-};
+
+export default doctorReducer;
+
 
 export const getDoctor = () => async(dispatch) => {
   const response = await fetch(url);
@@ -62,8 +46,7 @@ export const saveDoctor = (doctor) => async(dispatch) => {
     });
 
   dispatch({
-    type: GET_DOCTORS,
+    type: POST_DOCTORS,
     payload: doctor,
   })
 };
-export default doctorReducer;

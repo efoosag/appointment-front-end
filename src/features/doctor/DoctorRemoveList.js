@@ -6,13 +6,11 @@ function DoctorRemoveList({ id, name, title, photo, bio}) {
   const dispatch = useDispatch();
   return (
     <tr key={id} className="lines">
-    <td>{photo}</td>
-    <td>{title}</td>
-    <td>{name}</td>
-    <td>{bio}</td>
+    <td>{title.toUpperCase()}</td>
+    <td>{name.toUpperCase()}</td>    
     <th scope="col">
       <button
-        className="remove-btn"
+        className="rempve-btn text-primary bg-danger "
         type="submit"
         onClick={() => dispatch(deleteDoctor(id))(
           window.location.reload(false),

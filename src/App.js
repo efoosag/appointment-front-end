@@ -12,13 +12,14 @@ import Detail from './features/doctor/detail';
 // import 'App.css'
 
 function App() {
+
   return ( 
     <div className='d-flex w-100'>
       <Router>
         <Navigations />
         <div className='d-flex flex-grow-1 justify-content-center'>
           <Routes>
-            <Route path = '/' element ={<Login />} />
+            <Route path = '/' element ={<Doctors />} />
             <Route path = '/doctors' element ={<Doctors />} />
             <Route path = '/' element ={<Doctors />} />
             <Route path= '/doctor' element={<Detail />} />
