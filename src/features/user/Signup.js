@@ -1,20 +1,20 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React, { Fragment, useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { signUpUser } from './UserSlice';
-import { useNavigate } from 'react-router-dom';
 
-const Signup = () => {  
-  const navigation = useNavigate();  
+const Signup = () => {
+  const navigation = useNavigate();
 
   const dispatch = useDispatch();
   const state = useSelector((state) => state.user);
   const { signedUp } = state;
   const [signedUpSuccess, setSignedUpSuccess] = useState(signedUp);
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState(""); 
- 
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
   const registerUser = (e) => {
     e.preventDefault();
     const newUser = {
@@ -23,20 +23,19 @@ const Signup = () => {
       password,
     };
     dispatch(signUpUser(newUser));
-    setName("");
-    setEmail("");
-    setPassword("");
-  };  
+    setName('');
+    setEmail('');
+    setPassword('');
+  };
   useEffect(() => {
-    setSignedUpSuccess(() => signedUp)
+    setSignedUpSuccess(() => signedUp);
     if (signedUpSuccess === 'up') {
-      navigation("/");
+      navigation('/');
     }
-  }, [navigation,signedUpSuccess,signedUp]);
+  }, [navigation, signedUpSuccess, signedUp]);
 
-  
   return (
-    <Fragment>
+    <>
       <div className="min-h-screen bg-gray-50 flex flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-md">
           <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -49,35 +48,37 @@ const Signup = () => {
               className="space-y-6"
               method="POST"
             >
-             <div>
-              <label>Name</label>
-              <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
-            </div>
-            <div>
-              <label>Email</label>
-              <input
-                type="email"
-                name="email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />              
-            </div>
-            <div>
-              <label>Password</label>
-              <input
-                type="password"
-                name="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />              
-            </div>
-            <button type='submit' onClick={registerUser}>Submit</button>
+              <div>
+                <label>Name</label>
+                <input name="name" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+              </div>
+              <div>
+                <label>Email</label>
+                <input
+                  type="email"
+                  name="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+              <div>
+                <label>Password</label>
+                <input
+                  type="password"
+                  name="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+              </div>
+              <button type="submit" onClick={registerUser}>Submit</button>
             </form>
             <div className="mt-6">
               <div className="relative">
                 <div className="relative flex justify-center text-sm">
                   <span className="px-2 bg-white text-gray-500">
-                    Or <Link to="/login"> Login</Link>
+                    Or
+                    {' '}
+                    <Link to="/login"> Login</Link>
                   </span>
                 </div>
               </div>
@@ -85,7 +86,7 @@ const Signup = () => {
           </div>
         </div>
       </div>
-    </Fragment>
+    </>
   );
 };
 export default Signup;

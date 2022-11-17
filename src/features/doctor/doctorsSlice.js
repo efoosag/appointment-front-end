@@ -1,3 +1,5 @@
+/* eslint-disable no-param-reassign */
+/* eslint-disable no-unused-vars */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 export const fetchDoctors = createAsyncThunk('doctors/fetchingDoctors', async () => {
@@ -8,7 +10,7 @@ export const fetchDoctors = createAsyncThunk('doctors/fetchingDoctors', async ()
 
 export const deleteDoctor = createAsyncThunk('doctors/deleteDoctors', async (id) => {
   const response = await fetch(`http://localhost:3000/api/v1/doctors/${id}`,
-  { method: "delete" });
+    { method: 'delete' });
   const doctors = await response.json();
   return doctors;
 });
@@ -17,7 +19,7 @@ export const doctorsSlice = createSlice({
   initialState: {
     doctors: [],
     status: 'idle',
-    error: null
+    error: null,
   },
   reducers: {},
   extraReducers: {
@@ -32,8 +34,8 @@ export const doctorsSlice = createSlice({
     [fetchDoctors.rejected]: (state, action) => {
       state.status = 'failed';
       state.error = action.error.message;
-    }
-  }
+    },
+  },
 });
 
 export default doctorsSlice.reducer;
