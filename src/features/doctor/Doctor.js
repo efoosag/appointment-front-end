@@ -1,16 +1,18 @@
 import React from 'react'
 import { Link, } from 'react-router-dom';
-import { getDoctors } from '../../app/doctor';
 import { useDispatch} from 'react-redux';
 import './doctor.css';
+import { getDoctors } from '../../app/detail';
 
 
-function Doctor({name, title, photo}) {
+function Doctor({doctor}) {
 
   const dispatch = useDispatch();
   const handleDetails = () => {
-    dispatch(getDoctors(Doctor));
+    dispatch(getDoctors(doctor));
   }
+
+  const { title, name, photo, biography} = doctor;
 
   return (
     <>
@@ -19,7 +21,7 @@ function Doctor({name, title, photo}) {
         <img className="doctor-image" src={photo} alt={name}onClick={handleDetails}  />
       </Link>
       <h3 className="doctor-name">{name}</h3>
-      <p className="doctor-title">{title}</p>
+      <h4 className="doctor-title">{title}</h4>
     </div>
   </>
     
