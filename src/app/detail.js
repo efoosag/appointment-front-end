@@ -1,7 +1,6 @@
 const GET_DOCTOR = "GET_DOCTOR"
-const url = "http://localhost:3000/api/v1/doctors"
 
-const initialState = JSON.parse(localStorage.getItem('doctor'));
+const initialState = [];
 
 const detailReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -14,18 +13,8 @@ const detailReducer = (state = initialState, action) => {
 
 export default detailReducer;
 
-export const getDoctor = () => async(dispatch) => {
-    const response = await fetch(url);
-    const doctor = await response.json();
-  
-    dispatch({
-        type: GET_DOCTOR,
-        payload: doctor
-    })
-  }
-
-export const getdoctor = (doctor) => {
-  localStorage.setItem('doctor',  JSON.stringify(doctor));
+export const getDoctors = (doctor) => {
+  localStorage.setItem('doctors',  JSON.stringify(doctor));
   return {
     type: GET_DOCTOR,
     doctor: doctor,
