@@ -1,7 +1,7 @@
 const GET_DOCTOR = "GET_DOCTOR"
 const url = "http://localhost:3000/api/v1/doctors"
 
-const initialState = JSON.parse(localStorage.getItem('doctor'));
+const initialState = []
 
 const detailReducer = (state = initialState, action) => {
   switch (action.type) {
