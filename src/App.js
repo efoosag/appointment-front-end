@@ -9,19 +9,19 @@ import DoctorDelete from './features/doctor/DoctorDelete';
 // import 'App.css'
 
 function App() {
-  return ( 
-    <div class='d-flex w-100'>
+  return (
+    <div className='d-flex w-100'>
       <Router>
         <Navigations />
-        <div class='d-flex flex-grow-1 justify-content-center'>
+        <div className ='d-flex flex-grow-1 justify-content-center'>
           <Routes>
-            <Route path = '/' element ={<Doctors />} />
-            <Route path = '/reserve_form' element ={<ReserveForm />} />
-            <Route path = '/reservation' element ={<Reservations />} />
-            <Route path = '/add_doctor' element ={<DoctorForm />} />
-            <Route path = '/delete_doctor' element ={<DoctorDelete />} />
-          </Routes> 
-        </div>               
+            <Route path='/' element={<Doctors />} />
+            <Route path='/reserve_form' element={<ReserveForm />} />
+            <Route path='/reservation' element={<Reservations />} />
+            <Route path='/add_doctor' element={<DoctorForm />} />
+            <Route path='/delete_doctor' element={<DoctorDelete />} />
+          </Routes>
+        </div>
       </Router>
     </div>
   );
