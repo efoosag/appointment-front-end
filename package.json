@@ -7,17 +7,28 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
+<<<<<<< HEAD
     "bootstrap": "^5.2.2",
+=======
+    "axios": "^1.1.3",
+    "eslint-plugin-react-hooks": "^5.0.0-next-d1e35c703-20221110",
+>>>>>>> b330afbe86c6b9ff1119b29509d6b6249fa8e580
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
     "react-dom": "^18.2.0",
+    "react-hook-form": "7.34.2",
+    "react-icons": "^4.6.0",
     "react-redux": "^8.0.4",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+<<<<<<< HEAD
     "start": "set PORT=3010 && react-scripts start",
+=======
+    "start": "cross-env PORT=3010 react-scripts start",
+>>>>>>> b330afbe86c6b9ff1119b29509d6b6249fa8e580
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -39,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3"
   }
 }
