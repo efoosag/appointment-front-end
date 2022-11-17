@@ -19,13 +19,12 @@ function DoctorDelete({ id, photo, title, name, biography }) {
   }, []); 
   return (
     
-        <table className="table">
-          <thead className="thead-dark">
+        <table className="table table-striped m-5 w-50">
+          <thead className="bg-success">
             <tr>
-              <th scope="col">Photo</th>
               <th scope="col">Title</th>
               <th scope="col">Name</th>
-              <th scope="col">Biography</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>

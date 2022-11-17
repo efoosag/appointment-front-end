@@ -11,7 +11,7 @@ const AddDoctor = () => {
   const navigate = useNavigate();
 
   const gotToHome = () => {
-    navigate('/');
+    navigate('/doctors');
   };
 
   const dispatch = useDispatch();

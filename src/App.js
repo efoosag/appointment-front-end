@@ -18,7 +18,7 @@ function App() {
         <Navigations />
         <div className='d-flex flex-grow-1 justify-content-center'>
           <Routes>
-            <Route path = '/' element ={<Login />} />
+            <Route path = '/' element ={<Doctors />} />
             <Route path = '/doctors' element ={<Doctors />} />
             <Route path = '/' element ={<Doctors />} />
             <Route path= '/doctor' element={<Detail />} />
