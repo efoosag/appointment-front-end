@@ -4,7 +4,7 @@ import './navigation.css'
 function Navigations() {
 
   return (
-    <nav >
+    <nav>
       <div class="tot">
         <a class="nav-link titl" href="/doctors">Medical Center</a>
         <div class="navi">
