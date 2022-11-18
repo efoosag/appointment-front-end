@@ -1,16 +1,15 @@
-import React from 'react'
-import './navigation.css'
+import React from 'react';
+import './navigation.css';
 
 function Navigations() {
-
   return (
     <nav>
-      <div class="tot">
-        <a class="nav-link titl" href="/doctors">Medical Center</a>
-        <div class="navi">
-          <ul class="list">
-            <li class="nav-item py-2">
-              <a class="nav-link active" aria-current="page" href="/doctors">Doctor</a>
+      <div className="tot">
+        <a className="nav-link titl" href="/doctors">Medical Center</a>
+        <div className="navi">
+          <ul className="list">
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/doctors">Doctor</a>
             </li>
             <li className="nav-item py-2">
               <a className="nav-link active" aria-current="page" href="/reserve_form">Make Reservation</a>
@@ -28,7 +27,7 @@ function Navigations() {
         </div>
       </div>
     </nav>
-  )
+  );
 }
 
 export default Navigations;
