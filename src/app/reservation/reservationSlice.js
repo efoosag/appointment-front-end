@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -8,11 +9,11 @@ const reservationsSlice = createSlice({
   name: 'reservations',
   initialState,
   reducers: {
-    add_reservations: (state, { payload }) => {
+    addReservations: (state, { payload }) => {
       state.reservations = payload;
     },
   },
 });
 
-export const { add_reservations } = reservationsSlice.actions;
+export const { addReservations } = reservationsSlice.actions;
 export default reservationsSlice.reducer;

@@ -1,17 +1,19 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable react/no-unescaped-entities */
 // import React from 'react';
 import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from 'react-redux';
-import { add_reservations } from '../../app/reservation/reservationSlice';
+import { addReservations } from '../../app/reservation/reservationSlice';
 
 function Reservations() {
   const dispatch = useDispatch();
   const fetchReservationData = async () => {
     const response = await fetch(
-      'http://localhost:3000/api/v1/reservations'
+      'http://localhost:3000/api/v1/reservations',
     ).then((response) => response.json());
-    console.log(response);
-    dispatch(add_reservations(response));
+
+    dispatch(addReservations(response));
   };
 
   useEffect(() => {
@@ -19,7 +21,6 @@ function Reservations() {
   }, []);
 
   const reservations = useSelector((state) => state.reservation.reservations);
-  console.log(reservations);
 
   return (
     <div>
