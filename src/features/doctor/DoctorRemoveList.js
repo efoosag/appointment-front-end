@@ -5,11 +5,11 @@ import { deleteDoctor } from './doctorsSlice';
 
 function DoctorRemoveList({ doctor }) {
   const dispatch = useDispatch();
-  const { id, title, name } = doctor;
+  const { id, attributes } = doctor;
   return (
     <tr key={id} className="lines">
-      <td>{title}</td>
-      <td>{name}</td>
+      <td>{attributes.name}</td>
+      <td>{attributes.title}</td>
       <th scope="col">
         <button
           className="rempve-btn text-primary bg-danger "

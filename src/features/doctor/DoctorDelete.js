@@ -3,8 +3,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchDoctors } from './doctorsSlice';
-import DoctorRemoveList from './DoctorRemoveList';
+import { fetchDoctors, deleteDoctor } from './doctorsSlice';
 
 function DoctorDelete({
   id, photo, title, name, biography,
@@ -34,10 +33,22 @@ function DoctorDelete({
       </thead>
       <tbody>
         {doctors.map((doctor) => (
-          <DoctorRemoveList
-            key={doctor.id}
-            doctor={doctor.attributes}
-          />
+          <tr key={doctor.id} className="lines">
+            <td>{doctor.attributes.name}</td>
+            <td>{doctor.attributes.title}</td>
+            <th scope="col">
+              <button
+                className="rempve-btn text-primary bg-danger "
+                type="submit"
+                onClick={() => dispatch(deleteDoctor(id))(
+                  window.location.reload(false),
+                )}
+              >
+                {/* <FontAwesomeIcon icon={faTrash} className="trashcan" /> */}
+                remove
+              </button>
+            </th>
+          </tr>
         ))}
       </tbody>
     </table>
