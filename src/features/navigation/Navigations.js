@@ -12,26 +12,23 @@ function Navigations() {
             <li class="nav-item py-2">
               <a class="nav-link active" aria-current="page" href="/doctors">Doctor</a>
             </li>
-            <li class="nav-item py-2">
-              <a class="nav-link active" aria-current="page" href="/reserve_form">Make Reservation</a>
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/reserve_form">Make Reservation</a>
             </li>
-            <li class="nav-item py-2">
-              <a class="nav-link active" aria-current="page" href="/reservation">My Reservations</a>
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/reservation">My Reservations</a>
             </li>
-            <li class="nav-item py-2">
-              <a class="nav-link active" aria-current="page" href="/add_doctor">Add Doctor</a>
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/add_doctor">Add Doctor</a>
             </li>
-            <li class="nav-item py-2">
-              <a class="nav-link active" aria-current="page" href="/delete_doctor">Delete Doctor</a>
-            </li>
-            <li class="nav-item py-2">
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/delete_doctor">Delete Doctor</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    
   )
 }
 
-export default Navigations
+export default Navigations;
