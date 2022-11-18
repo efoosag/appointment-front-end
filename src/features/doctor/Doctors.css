@@ -11,7 +11,9 @@
   margin-top: 10px;
   display: flex;
   justify-content: center;
+  color: #97BF0F;
 }
+
 .doctor-paragraph,
 .dashes {
   text-align: center;
