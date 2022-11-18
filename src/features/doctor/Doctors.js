@@ -1,7 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable no-use-before-define */
-/* eslint-disable react-hooks/exhaustive-deps */
+
 import React, { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { AiFillCaretRight, AiFillCaretLeft } from 'react-icons/ai';
@@ -38,7 +39,7 @@ function Doctors() {
 
   useEffect(() => {
     retrieveDoctors();
-  }, [fetchDoctors]);
+  }, []);
 
   return (
     <div className="doctor">
@@ -52,7 +53,7 @@ function Doctors() {
           <AiFillCaretLeft className="back-arrow" />
         </div>
         {
-          doctors?.map((doctor) => (<Doctor key={doctor.id} doctor={doctor} />))
+          doctors?.map((doctor) => (<Doctor key={doctor.id} doctor={doctor.attributes} />))
         }
         <div className="next" onClick={next}>
           <AiFillCaretRight className="next-arrow" />

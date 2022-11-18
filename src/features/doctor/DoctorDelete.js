@@ -36,11 +36,7 @@ function DoctorDelete({
         {doctors.map((doctor) => (
           <DoctorRemoveList
             key={doctor.id}
-            id={doctor.id}
-            name={doctor.name}
-            bio={doctor.biography}
-            title={doctor.title}
-            photo={doctor.photo}
+            doctor={doctor.attributes}
           />
         ))}
       </tbody>
