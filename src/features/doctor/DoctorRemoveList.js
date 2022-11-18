@@ -3,14 +3,13 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { deleteDoctor } from './doctorsSlice';
 
-function DoctorRemoveList({
-  id, name, title,
-}) {
+function DoctorRemoveList({ doctor }) {
   const dispatch = useDispatch();
+  const { id, attributes } = doctor;
   return (
     <tr key={id} className="lines">
-      <td>{title.toUpperCase()}</td>
-      <td>{name.toUpperCase()}</td>
+      <td>{attributes.name}</td>
+      <td>{attributes.title}</td>
       <th scope="col">
         <button
           className="rempve-btn text-primary bg-danger "
