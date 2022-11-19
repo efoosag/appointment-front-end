@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import { fetchDoctors } from "../doctor/doctorsSlice";
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import Button from 'react-bootstrap/Button';
+import Form from 'react-bootstrap/Form';
+import { fetchDoctors } from '../doctor/doctorsSlice';
 
 function ReserveForm() {
   const dispatch = useDispatch();
@@ -20,10 +20,10 @@ function ReserveForm() {
   const { id } = useParams();
   const [state, setState] = useState({
     doctorId: id,
-    reserve_date: "",
-    city: "",
+    reserve_date: '',
+    city: '',
   });
-  const [message, setMessage] = useState("");
+  const [message, setMessage] = useState('');
 
   const handleChange = (e) => {
     setState({
@@ -33,17 +33,17 @@ function ReserveForm() {
 
   const resetFormFields = () => {
     setState({
-      doctorId: "",
-      reserve_date: "",
-      city: "",
+      doctorId: '',
+      reserve_date: '',
+      city: '',
     });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3000/api/v1/reservations", {
-        method: "POST",
+      const res = await fetch('http://localhost:3000/api/v1/reservations', {
+        method: 'POST',
         body: JSON.stringify({
           doctor_id: state.doctorId,
           reserve_date: state.reserve_date,
@@ -51,10 +51,11 @@ function ReserveForm() {
         }),
       });
       const resJson = await res.json();
+      console.log(resJson);
       if (res.status === 200) {
-        setMessage("User created successfully");
+        setMessage('User created successfully');
       } else {
-        setMessage("Some error occured");
+        setMessage('Some error occured');
       }
     } catch (err) {
       console.log(message);

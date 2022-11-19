@@ -10,7 +10,7 @@ function Reservations() {
   const dispatch = useDispatch();
   const fetchReservationData = async () => {
     const response = await fetch(
-      'http://localhost:3000/api/v1/reservations'
+      'http://localhost:3000/api/v1/reservations',
     ).then((response) => response.json());
     dispatch(addReservations(response));
   };
