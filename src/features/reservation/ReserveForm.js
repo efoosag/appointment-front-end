@@ -31,7 +31,6 @@ function ReserveForm() {
     });
   };
 
-
   const resetFormFields = () => {
     setState({
       doctorId: '',
@@ -46,6 +45,7 @@ function ReserveForm() {
       let res = await fetch('http://localhost:3000/api/v1/reservations', {
         method: 'POST',
         body: JSON.stringify({
+          
           doctor_id: state.doctorId,
           reserve_date: state.reserve_date,
           city: state.city,
