@@ -12,14 +12,12 @@ function Reservations() {
     const response = await fetch(
       'http://localhost:3000/api/v1/reservations',
     ).then((response) => response.json());
-
-    dispatch(addReservations(response));
+    dispatch(add_reservations(response));
   };
 
   useEffect(() => {
     fetchReservationData();
   }, []);
-
   const reservations = useSelector((state) => state.reservation.reservations);
 
   return (

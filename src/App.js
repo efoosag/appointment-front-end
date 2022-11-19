@@ -9,7 +9,7 @@ import DoctorDelete from './features/doctor/DoctorDelete';
 import Signup from './features/user/Signup';
 import Login from './features/user/Login';
 import Detail from './features/doctor/detail';
-// import 'App.css'
+
 
 function App() {
   return (
