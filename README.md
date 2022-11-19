@@ -1,46 +1,91 @@
-# Getting Started with Create React App and Redux
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+# Doctors Appointment Booking UI
 
-## Available Scripts
+This project is made for the reservation of doctor appointment. This website provides a platform for people to easily check available doctor with there specialty and book an appointment with a specific doctor depending on the type health issue of the patient.
 
-In the project directory, you can run:
+Main features of this website are:
 
-### `npm start`
+- Users can see details of all the Doctors.
+- Users can book a specialized doctor in a specific city .
+- Users can add their doctors.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Built With
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Programming Languages: HTML, CSS, JavaScript.
+- Frameworks: React, Redux and Bootstrap.
+- Code Editor: VS Code.
+- Technologies: Git, Gitflow, Linters, Github, PostgreSql
 
-### `npm test`
+## Kanban Board:
+Kanban Board [link](https://github.com/users/efoosag/projects/9)
+**Initial state of the Kanban Board:**
+![final capstone kanban board](https://user-images.githubusercontent.com/96612103/202553426-d53bf33f-bc93-4a88-bf2f-124899c42bac.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Live link
+[doctors-appoint.com](https://)
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To get a local copy up and running follow these simple example steps.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- A web browser like Google Chrome.
+- A code editor like Visual Studio Code with Git and nodejs.
+- Have `visual-studio code` or any other code editor installed on your computer.
 
-### `npm run eject`
+### Setup
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- In order to get a copy of this project you need to clone it from https://github.com/efoosag/appointment-front-end.git
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Install and start
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Run the command bellow in your terminal to get all required files
 
-## Learn More
+```
+npm install
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+npm start
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Authors
+
+👤 **Dadi Gideon**
+
+- GitHub: [@githubhandle](https://github.com/gids-dadi)
+- Twitter: [@twitterhandle](https://twitter.com/Dadi_AG)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/gideon-dadi-1b5548146/)
+
+👤 **Bruk Teshome**
+
+- GitHub: [@githubhandle](https://github.com/bruk19)
+- Twitter: [@twitterhandle](https://twitter.com/Bruktesh)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/bruk-teshome-ab4325226)
+
+👤 **Victor**
+
+- GitHub: [@efoosag](https://github.com/efoosag)
+- Twitter: [@Victor Osagie](https://www.twitter.com/Victorosagie08)
+- LinkedIn: [@VictorOsagie](https://www.linkedin.com/in/victor-osagie-a713ba22b/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hats off to the whole microverse community
+- Original design idea by [Murat Korkmaz on Behance.](https://www.behance.net/muratk)
+
+## 📝 License
+
+This project is [MIT](https://github.com/jahongiry/book-appointment_front-end/blob/Dev/LICENCE) licensed.

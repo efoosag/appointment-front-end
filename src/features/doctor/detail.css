@@ -2,14 +2,15 @@
 .detail-container {
   display: flex;
   justify-content: space-between;
-  width: 100%;}
+  width: 100%;
+}
 
-  .detail-image {
-    border-radius: 5%;
-    max-width: 1000px;
-    width: 95%;
-    margin: 0 auto;
-  }
+.detail-image {
+  border-radius: 5%;
+  max-width: 1000px;
+  width: 95%;
+  margin: 0 auto;
+}
 
 .buttons {
   margin-top: 15px;
@@ -22,19 +23,21 @@
   margin-top: 10px;
   width: 90%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
 }
 
 table {
-  width: 100%;}
+  width: 100%;
+}
 
-  tr {
-    height: 40px;}
+tr {
+  height: 40px;
+}
 
-    tr:nth-child(odd) {
-      background-color: #adb0a486;
-    }
+tr:nth-child(odd) {
+  background-color: #adb0a486;
+}
 
-    td {
-      padding: 5px;
-    }
+td {
+  padding: 5px;
+}

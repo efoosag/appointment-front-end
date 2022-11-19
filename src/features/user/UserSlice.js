@@ -38,23 +38,22 @@ export const logOut = () => ({
 
 export const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SIGN_UP:
-      return {
-        ...action.payload,
-      };
-    case LOG_IN:
-      return action.payload;
+  case SIGN_UP:
+    return {
+      ...action.payload,
+    };
+  case LOG_IN:
+    return action.payload;
 
-    case LOG_OUT:
-      return action.payload;
+  case LOG_OUT:
+    return action.payload;
 
-    default:
-      return state;
+  default:
+    return state;
   }
 };
 
-
-export const signUpUser = (details) =>async (dispatch) => {
+export const signUpUser = (details) => async (dispatch) => {
   const { name, email, password } = details;
   try {
     await axios.post(`${BASE_URL}/signup`, {
@@ -64,9 +63,9 @@ export const signUpUser = (details) =>async (dispatch) => {
     });
     dispatch(signUp(
       {
-        name: name,
-        email: email,
-        password: password,
+        name,
+        email,
+        password,
         loggedIn: false,
         userId: '',
         signedUp: 'up',

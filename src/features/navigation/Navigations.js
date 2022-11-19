@@ -1,4 +1,5 @@
 import React from 'react';
+<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom';
 
 function Navigations() {
@@ -79,6 +80,31 @@ function Navigations() {
               >
                 Log Out
               </button>
+=======
+import './navigation.css';
+
+function Navigations() {
+  return (
+    <nav>
+      <div className="tot">
+        <a className="nav-link titl" href="/doctors">Medical Center</a>
+        <div className="navi">
+          <ul className="list">
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/doctors">Doctor</a>
+            </li>
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/reserve_form">Make Reservation</a>
+            </li>
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/reservation">My Reservations</a>
+            </li>
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/add_doctor">Add Doctor</a>
+            </li>
+            <li className="nav-item py-2">
+              <a className="nav-link active" aria-current="page" href="/delete_doctor">Delete Doctor</a>
+>>>>>>> 568bb1ad72b68df0a2dd878f1795029e46b455da
             </li>
           </ul>
         </div>
