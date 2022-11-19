@@ -22,6 +22,8 @@ Kanban Board [link](https://github.com/users/efoosag/projects/9)
 **Initial state of the Kanban Board:**
 ![final capstone kanban board](https://user-images.githubusercontent.com/96612103/202553426-d53bf33f-bc93-4a88-bf2f-124899c42bac.png)
 
+
+
 ## Live link
 [doctors-appoint.com](https://)
 
@@ -37,7 +39,8 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-- In order to get a copy of this project you need to clone it from https://github.com/efoosag/appointment-front-end.git
+- In order to get a copy of this project you need to clone it from `https://github.com/efoosag/appointment-front-end.git`
+- The link to the backend file is  `https://github.com/efoosag/appointment-front-end.git`
 
 
 ### Install and start
