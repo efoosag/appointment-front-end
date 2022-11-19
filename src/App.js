@@ -10,7 +10,6 @@ import Signup from './features/user/Signup';
 import Login from './features/user/Login';
 import Detail from './features/doctor/detail';
 
-
 function App() {
   return (
     <div className="d-flex w-100">

@@ -4,13 +4,13 @@
 import React, { useEffect } from 'react';
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from 'react-redux';
-import { addReservations } from '../../app/reservation/reservationSlice';
+import { add_reservations } from '../../app/reservation/reservationSlice';
 
 function Reservations() {
   const dispatch = useDispatch();
   const fetchReservationData = async () => {
     const response = await fetch(
-      'http://localhost:3000/api/v1/reservations',
+      'http://localhost:3000/api/v1/reservations'
     ).then((response) => response.json());
     dispatch(add_reservations(response));
   };

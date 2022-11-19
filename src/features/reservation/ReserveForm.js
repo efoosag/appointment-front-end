@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import { fetchDoctors } from '../doctor/doctorsSlice';
 import { useDispatch, useSelector } from 'react-redux';
-import { useParams } from 'react-router-dom';
 
 function ReserveForm() {
   const dispatch = useDispatch();
@@ -39,19 +39,18 @@ function ReserveForm() {
     });
   };
 
-  let handleSubmit = async (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      let res = await fetch('http://localhost:3000/api/v1/reservations', {
+      const res = await fetch('http://localhost:3000/api/v1/reservations', {
         method: 'POST',
         body: JSON.stringify({
-          
           doctor_id: state.doctorId,
           reserve_date: state.reserve_date,
           city: state.city,
         }),
       });
-      let resJson = await res.json();
+      const resJson = await res.json();
       if (res.status === 200) {
         setMessage('User created successfully');
       } else {
