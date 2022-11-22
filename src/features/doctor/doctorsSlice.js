@@ -11,8 +11,8 @@ export const fetchDoctors = createAsyncThunk('doctors/fetchingDoctors', async ()
 export const deleteDoctor = createAsyncThunk('doctors/deleteDoctors', async (id) => {
   const response = await fetch(`http://localhost:3000/api/v1/doctors/${id}`,
     { method: 'delete' });
-  const doctors = await response.json();
-  return doctors;
+  const doctor = await response.json();
+  return doctor;
 });
 export const doctorsSlice = createSlice({
   name: 'doctors',

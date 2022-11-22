@@ -5,9 +5,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchDoctors, deleteDoctor } from './doctorsSlice';
 
-function DoctorDelete({
-  id, photo, title, name, biography,
-}) {
+const DoctorDelete = () => {
   const dispatch = useDispatch();
 
   // eslint-disable-next-line
@@ -16,44 +14,46 @@ function DoctorDelete({
   };
 
   const doctors = useSelector((state) => state?.doctors?.doctors);
-
   useEffect(() => {
     retrieveDoctors();
     // eslint-disable-next-line
   }, []); 
   return (
 
-    <table className="table table-striped m-5 w-50">
-      <thead className="bg-success">
-        <tr>
-          <th scope="col">Title</th>
-          <th scope="col">Name</th>
-          <th scope="col" />
-        </tr>
-      </thead>
-      <tbody>
-        {doctors.map((doctor) => (
-          <tr key={doctor.id} className="lines">
-            <td>{doctor.attributes.name}</td>
-            <td>{doctor.attributes.title}</td>
-            <th scope="col">
-              <button
-                className="rempve-btn text-primary bg-danger "
-                type="submit"
-                onClick={() => dispatch(deleteDoctor(id))(
-                  window.location.reload(false),
-                )}
-              >
-                {/* <FontAwesomeIcon icon={faTrash} className="trashcan" /> */}
-                remove
-              </button>
-            </th>
+    <div className="col-12 d-flex">
+      <table className="table table-bordered table-striped w-75 align-self-center mx-auto">
+        <thead className="bg-success">
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Title</th>
+            <th scope="col" />
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {doctors.map((doctor) => (
+            <tr key={doctor.id}>
+
+              <td>{doctor.name}</td>
+              <td>{doctor.title}</td>
+              <th scope="col">
+                <button
+                  className="remove-btn text-primary bg-danger"
+                  type="submit"
+                  onClick={() => dispatch(deleteDoctor(doctor.id))(
+                    window.location.reload(false),
+                  )}
+                >
+                  {/* <FontAwesomeIcon icon={faTrash} className="trashcan" /> */}
+                  remove
+                </button>
+              </th>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
 
   );
-}
+};
 
 export default DoctorDelete;

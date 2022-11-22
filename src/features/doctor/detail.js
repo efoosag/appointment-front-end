@@ -18,9 +18,9 @@ export default function Detail() {
   };
 
   const Doctor = useSelector((state) => state.detail);
-
   return (
     <div className="dit">
+
       <h1>{Doctor.name}</h1>
       <div className="detail-container">
         <img className="detail-image" src={Doctor.photo} alt={Doctor.name} />
