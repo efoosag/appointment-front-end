@@ -36,7 +36,6 @@ function Doctors() {
     dispatch(fetchDoctors());
   };
   const doctors = useSelector((state) => state?.doctors?.doctors);
-
   useEffect(() => {
     retrieveDoctors();
   }, []);
@@ -53,7 +52,7 @@ function Doctors() {
           <AiFillCaretLeft className="back-arrow" />
         </div>
         {
-          doctors?.map((doctor) => (<Doctor key={doctor.id} doctor={doctor.attributes} />))
+          doctors?.map((doctor) => (<Doctor key={doctor.id} doctor={doctor} />))
         }
         <div className="next" onClick={next}>
           <AiFillCaretRight className="next-arrow" />
